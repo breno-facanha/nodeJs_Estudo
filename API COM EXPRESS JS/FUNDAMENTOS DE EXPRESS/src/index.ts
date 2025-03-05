@@ -5,6 +5,7 @@ import rotasAninhadas from "./routes/rotasAninhadas"
 import statusHttp from "./routes/status"
 import parametrosDeRota from "./routes/parametrosDeRota"
 import parametrosDeQuery from "./routes/parametrosDeQuery"
+import metodo from "./routes/metodos"
 const port = 3000
 const app = express()
 
@@ -20,6 +21,7 @@ app.use("/produtos", rotasAninhadas)
 app.use(statusHttp)
 app.use(parametrosDeRota)
 app.use(parametrosDeQuery)
+app.use("/metodos", metodo)
 
 
 
