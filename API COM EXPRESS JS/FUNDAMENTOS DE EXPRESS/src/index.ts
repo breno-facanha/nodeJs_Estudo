@@ -15,6 +15,9 @@ const app = express()
 //     next();
 // })
 
+//middleware para a leitura do body da requisição
+app.use(express.urlencoded({extended: true}))
+
 app.use(rotasBasico)
 app.use(rotasDiferentesRetornos)
 app.use("/produtos", rotasAninhadas)
